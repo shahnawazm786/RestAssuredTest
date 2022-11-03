@@ -1,6 +1,5 @@
 package org;
 
-import io.cucumber.java.eo.Se;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -117,6 +116,9 @@ public class UserPage {
     public void itemAddIntoCart(){
         addToCart.click();
     }
+    public void  SelectSSize(){
+        selectSSize.click();
+    }
 
     public void selectColor(){
         selectColor.click();
@@ -151,7 +153,7 @@ public class UserPage {
     public void clickOnPlaceOrder(){
         placedOrder.click();
     }
-    
+
     public void verifyThanks(){
         assertEquals("Thank you for your purchase!",thankyou.getText());
     }
