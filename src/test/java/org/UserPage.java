@@ -45,6 +45,14 @@ public class UserPage {
     @FindBy(xpath = "//button[@title='Add to Cart']")
     private  WebElement addToCart;
 
+    @FindBy(xpath="(//div[text()='S'])[1]")
+    private  WebElement selectSSize;
+
+    @FindBy(id = "option-label-color-93-item-49")
+    private WebElement selectColor;
+
+    @FindBy(id="product-addtocart-button")
+    private  WebElement addProduct;
 
     // Method declarations
     public void enterMandatoryDataForRegistration(){
@@ -70,5 +78,14 @@ public class UserPage {
     public void itemAddIntoCart(){
         addToCart.click();
     }
+
+    public void selectColor(){
+        selectColor.click();
+    }
+
+    public void clickOnAddProduct(){
+        addProduct.click();
+    }
+
 
 }
