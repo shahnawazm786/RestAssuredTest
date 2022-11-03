@@ -1,7 +1,13 @@
 # RestAssuredTest
-RestAssured Example
-* Rest Assured 5.2
+RestAssuredTest is the name of application, I opted very basic approach to explain how API is reterived and JSON object passed into the body.
+Status code checked for successful transaction.
+Assert is used to validate the business requirement,
 * Java 1.8
-* Cucumber 7.2
+* Rest Assured 5.2
+* Cucumber java 7.9.0
+* Cucumber core 7.9.0
+* Cucumber Junit 7.9.0
 * Junit 4.3
-* Cucumber Junit 7.2
+
+# Acceptance is class to run application.
+# Simple cucumber reporting used
