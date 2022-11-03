@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12ae577b-9a2f-48df-9989-0f8580f68063" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Runner/Acceptance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/UserAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/stepsdef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utility/ConfigurationData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utility/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/stepsdef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/stepsdef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/test.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

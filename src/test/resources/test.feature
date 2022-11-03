@@ -15,3 +15,9 @@ Feature: Demo API test
     When enter data to add user
     And response should be 201
 
+    @updateuser
+    Scenario: Update user
+      When enter data to update user
+      And response should be 201
+
+

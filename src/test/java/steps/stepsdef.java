@@ -37,4 +37,9 @@ public class stepsdef {
     public void enterDataToAddUser() {
         listUserAPI.addUsers();
     }
+
+    @When("enter data to update user")
+    public void enterDataToUpdateUser() {
+
+    }
 }

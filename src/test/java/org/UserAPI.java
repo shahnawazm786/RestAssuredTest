@@ -47,6 +47,9 @@ public class UserAPI {
         response=requestSpecification.post("/api/user");
         System.out.println(response.getStatusCode());
 }
+public void updateUsers(){
+
+}
 
 
 }
