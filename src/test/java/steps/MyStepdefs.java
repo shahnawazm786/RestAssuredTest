@@ -4,14 +4,17 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.messages.types.Hook;
 import org.UserPage;
 import org.openqa.selenium.WebDriver;
 
 public class MyStepdefs {
-    WebDriver driver=Hooks.driver;
-    UserPage userPage=new UserPage(driver);
+
+    UserPage userPage=new UserPage(Hooks.driver);
     @Given("enter mandatory data for registration")
-    public void enterMandatoryDataForRegistration() {
+    public void enterMandatoryDataForRegistration() throws Throwable {
+        userPage.clickOnCreateAccount();
+        Thread.sleep(2000);
         userPage.enterMandatoryDataForRegistration();
     }
 

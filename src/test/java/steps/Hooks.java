@@ -1,10 +1,10 @@
 package steps;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InterruptedIOException;
 import java.time.Duration;
 
 public class Hooks {
@@ -33,6 +32,6 @@ public class Hooks {
             scenario.attach(fileContent, "image/png", "screenshot");
         }
         driver.manage().deleteAllCookies();
-        driver.quit();
+       // driver.quit();
     }
 }

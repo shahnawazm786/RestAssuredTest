@@ -77,9 +77,6 @@ public class UserPage {
     @FindBy(xpath = "//button//span[text()='Next']")
     private  WebElement clickOnNext;
 
-    Select regions=new Select(driver.findElement(By.name("region_id")));
-
-    Select country=new Select(driver.findElement(By.name("country_id")));
 
     @FindBy(xpath = "//div[text()='Payment Method']")
     private WebElement paymentMethod;
@@ -93,6 +90,9 @@ public class UserPage {
 
     // Method declarations
 
+    public void clickOnCreateAccount(){
+        linkCreateAccount.click();
+    }
     public void enterMandatoryDataForRegistration(){
         txtFirstName.sendKeys("Jamesh");
         txtLastName.sendKeys("Bound");
@@ -134,7 +134,9 @@ public class UserPage {
         btnCheckout.click();
     }
     public void fillShipingAddress() throws InterruptedException{
-    shippingAddress.sendKeys("Marina Street");
+        Select regions=new Select(driver.findElement(By.name("region_id")));
+        Select country=new Select(driver.findElement(By.name("country_id")));
+        shippingAddress.sendKeys("Marina Street");
     shippingCity.sendKeys("New Delhi");
     country.selectByVisibleText("India");
     Thread.sleep(2000);
