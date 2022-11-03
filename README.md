@@ -1,3 +1,3 @@
 # RestAssuredTest
 RestAssured Example
-** Rest Assured Java 
+* Rest Assured Java 
