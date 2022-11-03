@@ -9,8 +9,11 @@ Assert is used to validate the business requirement,
 * Cucumber Junit 7.9.0
 * Junit 4.3
 
+# Page Object Model
+It is small test application indeed page object model has been used.
 # Acceptance class
 Acceptance class is used to run whole suites based on tags using JUnit.
 # Cucumber Report
 Cucumber report attached with this application to check the execustion time and success.
+
 
