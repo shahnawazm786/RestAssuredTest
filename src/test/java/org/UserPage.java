@@ -1,9 +1,12 @@
 package org;
 
+import io.cucumber.java.eo.Se;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import static org.junit.Assert.assertEquals;
 
@@ -54,7 +57,43 @@ public class UserPage {
     @FindBy(id="product-addtocart-button")
     private  WebElement addProduct;
 
+    @FindBy(xpath = "//a//span[text()='My Cart']")
+    private  WebElement clickOnMyCart;
+
+    @FindBy(id="top-cart-btn-checkout")
+    private  WebElement btnCheckout;
+
+    @FindBy(xpath = "(//input[@class='input-text'])[6]")
+    private  WebElement shippingAddress;
+
+    @FindBy(xpath="(//input[@class='input-text'])[9]")
+    private  WebElement shippingCity;
+
+    @FindBy(xpath="(//input[@class='input-text'])[11]")
+    private  WebElement shippingZip;
+
+    @FindBy(xpath = "(//input[@class='input-text'])[12]")
+    private  WebElement shippingPhone;
+
+    @FindBy(xpath = "//button//span[text()='Next']")
+    private  WebElement clickOnNext;
+
+    Select regions=new Select(driver.findElement(By.name("region_id")));
+
+    Select country=new Select(driver.findElement(By.name("country_id")));
+
+    @FindBy(xpath = "//div[text()='Payment Method']")
+    private WebElement paymentMethod;
+
+    @FindBy(xpath = "/button//span[text()='Place Order']")
+    private  WebElement placedOrder;
+
+    @FindBy(xpath = "//span[text()='Thank you for your purchase!']")
+    private  WebElement thankyou;
+
+
     // Method declarations
+
     public void enterMandatoryDataForRegistration(){
         txtFirstName.sendKeys("Jamesh");
         txtLastName.sendKeys("Bound");
@@ -86,6 +125,35 @@ public class UserPage {
     public void clickOnAddProduct(){
         addProduct.click();
     }
+    public void clickUserOnMyCart(){
+        clickOnMyCart.click();
+    }
+    public void clickOnCheckOut(){
+        btnCheckout.click();
+    }
+    public void fillShipingAddress() throws InterruptedException{
+    shippingAddress.sendKeys("Marina Street");
+    shippingCity.sendKeys("New Delhi");
+    country.selectByVisibleText("India");
+    Thread.sleep(2000);
+    regions.selectByVisibleText("Delhi");
+    shippingZip.sendKeys("110011");
+    shippingPhone.sendKeys("91-9078965");
 
+    }
+
+    public void clickOnNextButton(){
+        clickOnNext.click();
+    }
+    public void verifyPlacementOrder(){
+        assertEquals("Payment Method",paymentMethod.getText());
+    }
+    public void clickOnPlaceOrder(){
+        placedOrder.click();
+    }
+    
+    public void verifyThanks(){
+        assertEquals("Thank you for your purchase!",thankyou.getText());
+    }
 
 }
