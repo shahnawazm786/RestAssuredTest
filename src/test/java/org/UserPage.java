@@ -83,7 +83,7 @@ public class UserPage {
     @FindBy(xpath = "//div[text()='Payment Method']")
     private WebElement paymentMethod;
 
-    @FindBy(xpath = "/button//span[text()='Place Order']")
+    @FindBy(xpath = "//button//span[text()='Place Order']")
     private  WebElement placedOrder;
 
     @FindBy(xpath = "//span[text()='Thank you for your purchase!']")
