@@ -10,7 +10,18 @@ Assert is used to validate the business requirement,
 * Junit 4.3
 
 # Page Object Model
-It is small test application indeed page object model has been used.
+It is small test application indeed page object model has been used. Both for API and UI functional testing has been done.
+I tried to bring all the scope in this micro application.
+I gradually add more functionality in this project for the learner.
+Any one can enjoy the coding and learning using my application.
+Best part of this micro application is locator.
+* Locator - I tried to implement all kind of locator for the beginner.I used following type of
+locator.
+* * Id
+* * name
+* * css selector
+* * xpath
+very frequently.
 # Acceptance class
 Acceptance class is used to run whole suites based on tags using JUnit.
 # Cucumber Report
