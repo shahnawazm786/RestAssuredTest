@@ -28,8 +28,6 @@ public class MyStepdefs {
         userPage.verifyRegisteredUser();
     }
 
-
-
     @Then("user navigate to item page")
     public void userNavigateToItemPage() {
         userPage.clickOnMenMenuItem();
