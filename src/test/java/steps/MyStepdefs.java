@@ -45,7 +45,7 @@ public class MyStepdefs {
 
     }
     @And("goto item cart")
-    public void gotoItemCart() {
+    public void gotoItemCart() throws Throwable{
         userPage.clickUserOnMyCart();
         userPage.clickOnCheckOut();
     }
@@ -58,7 +58,7 @@ public class MyStepdefs {
     }
 
     @And("click on payment")
-    public void clickOnPayment() {
+    public void clickOnPayment() throws Throwable{
     userPage.verifyPlacementOrder();
     userPage.clickOnPlaceOrder();
 

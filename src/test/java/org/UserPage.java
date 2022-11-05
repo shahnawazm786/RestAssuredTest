@@ -151,7 +151,8 @@ public class UserPage {
     public void clickUserOnMyCart(){
         clickOnMyCart.click();
     }
-    public void clickOnCheckOut(){
+    public void clickOnCheckOut() throws InterruptedException{
+        Thread.sleep(2000);
         btnCheckout.click();
     }
     public void fillShipingAddress() throws InterruptedException{
@@ -167,13 +168,15 @@ public class UserPage {
 
     }
 
-    public void clickOnNextButton(){
+    public void clickOnNextButton() throws InterruptedException{
+        Thread.sleep(2000);
         clickOnNext.click();
     }
     public void verifyPlacementOrder(){
         assertEquals("Payment Method",paymentMethod.getText());
     }
-    public void clickOnPlaceOrder(){
+    public void clickOnPlaceOrder() throws InterruptedException{
+        Thread.sleep(3000);
         placedOrder.click();
     }
 
