@@ -45,7 +45,7 @@ public class UserPage {
     @FindBy(xpath="//a//span[text()='Men']")
     private WebElement clickOnMens;
 
-    @FindBy(xpath = "//button[@title='Add to Cart']")
+    @FindBy(xpath = "(//button[@title='Add to Cart'])[2]")
     private  WebElement addToCart;
 
     @FindBy(xpath="(//div[text()='S'])[1]")
@@ -88,6 +88,19 @@ public class UserPage {
     @FindBy(xpath = "//span[text()='Thank you for your purchase!']")
     private  WebElement thankyou;
 
+    //
+    @FindBy(xpath = "(//li[@class='authorization-link']//a)[1]")
+    private  WebElement signInLink;
+
+    @FindBy(id="email")
+    private  WebElement txtUser;
+
+
+    @FindBy(id="pass")
+    private  WebElement enterPassword;
+
+    @FindBy(xpath = "(//button[@id='send2'])[1]")
+    private  WebElement btnSignIn;
 
     // Method declarations
 
@@ -97,7 +110,7 @@ public class UserPage {
     public void enterMandatoryDataForRegistration(){
         txtFirstName.sendKeys("Jamesh");
         txtLastName.sendKeys("Bound");
-        txtEmailAddress.sendKeys("JameshBound2022123@gmail.com");
+        txtEmailAddress.sendKeys("JameshBound2023@gmail.com");
         txtPassword.sendKeys("JameshBound2022123");
         txtConfirmPassword.sendKeys("JameshBound2022123");
 
@@ -116,7 +129,7 @@ public class UserPage {
     }
     public void hoverMouseOnItem(){
         Actions actions=new Actions(driver);
-        WebElement element=driver.findElement(By.cssSelector("img[class='product-image-photo']"));
+        WebElement element=driver.findElement(By.xpath("(//img[@class='product-image-photo'])[2]"));
         actions.moveToElement(element).build().perform();
     }
     public void itemAddIntoCart(){
@@ -165,6 +178,14 @@ public class UserPage {
 
     public void verifyThanks(){
         assertEquals("Thank you for your purchase!",thankyou.getText());
+    }
+    public void clickOnSingLink(){
+        signInLink.click();;
+    }
+    public void enterValidCredentialLogin(){
+        txtUser.sendKeys("JameshBound2023@gmail.com");
+        enterPassword.sendKeys("JameshBound2022123");
+        btnSignIn.click();
     }
 
 }

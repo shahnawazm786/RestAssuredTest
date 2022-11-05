@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources",
         glue = {"steps"},
         plugin = {"pretty"},
-        tags="@registereduser"
+        tags="@loginuser"
 
 )
 public class Acceptance {

@@ -69,6 +69,13 @@ public class MyStepdefs {
         userPage.verifyThanks();
     }
 
+    @Given("click on singin link")
+    public void clickOnSinginLink() {
+    userPage.clickOnSingLink();
+    }
 
-
+    @Given("login with valid credential")
+    public void loginWithValidCredential() {
+    userPage.enterValidCredentialLogin();
+    }
 }
