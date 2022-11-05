@@ -36,6 +36,7 @@ public class MyStepdefs {
 
     @When("user select item")
     public void userSelectItem() {
+        userPage.hoverMouseOnItem();
         userPage.itemAddIntoCart();
         userPage.SelectSSize();
         userPage.selectColor();

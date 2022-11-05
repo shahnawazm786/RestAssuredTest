@@ -116,9 +116,8 @@ public class UserPage {
     }
     public void hoverMouseOnItem(){
         Actions actions=new Actions(driver);
-        
-        actions.moveToElement().build().perform();
-
+        WebElement element=driver.findElement(By.cssSelector("img[class='product-image-photo']"));
+        actions.moveToElement(element).build().perform();
     }
     public void itemAddIntoCart(){
 
