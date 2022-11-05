@@ -17,6 +17,7 @@ Feature: Add new user and make a payment
     Then verify payment successful
 
     @loginuser
+    Scenario: Purchase item for registered user
     Given click on singin link
     And login with valid credential
     When user navigate to item page

@@ -57,7 +57,8 @@ public class UserPage {
     @FindBy(id="product-addtocart-button")
     private  WebElement addProduct;
 
-    @FindBy(xpath = "//a//span[text()='My Cart']")
+    //@FindBy(xpath = "//a//span[text()='My Cart']")
+    @FindBy(xpath = "//span[text()='My Cart']//..")
     private  WebElement clickOnMyCart;
 
     @FindBy(id="top-cart-btn-checkout")
